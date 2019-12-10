@@ -1,0 +1,151 @@
+```sh
+npm install --save-dev webpack@4.41.2
+# npm install --save-dev url-loader@3.0.0
+npm install --save-dev css-loader@3.3.0
+npm install --save-dev webpack-bundle-analyzer@3.6.0
+npm install --save-dev copy-webpack-plugin@5.1.0
+npm install --save-dev optimize-css-assets-webpack-plugin@5.0.3 
+npm update js-yaml --depth 5
+
+# needed to address Error: Cannot find module 'webpack/bin/config-yargs'
+npm install --save-dev webpack-cli
+npm install --save-dev html-webpack-plugin
+npm install --save-dev webpack-dev-middleware
+
+```
+ === npm audit security report ===                        
+# Run  npm install --save-dev url-loader@3.0.0  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+  Moderate        Regular Expression Denial of Service                          
+  Package         mime                                                          
+  Dependency of   url-loader [dev]                                              
+  Path            url-loader > mime                                             
+  More info       https://npmjs.com/advisories/535                              
+
+# Run  npm install --save-dev css-loader@3.3.0  to resolve 2 vulnerabilities
+SEMVER WARNING: Recommended action is a potentially breaking change
+  Moderate        Denial of Service                                             
+  Package         js-yaml                                                       
+  Dependency of   css-loader [dev]                                              
+  Path            css-loader > cssnano > postcss-svgo > svgo > js-yaml          
+  More info       https://npmjs.com/advisories/788                              
+
+
+  High            Code Injection                                                
+  Package         js-yaml                                                       
+  Dependency of   css-loader [dev]                                              
+  Path            css-loader > cssnano > postcss-svgo > svgo > js-yaml          
+  More info       https://npmjs.com/advisories/813                              
+
+# Run  npm install --save-dev optimize-css-assets-webpack-plugin@5.0.3  to resolve 2 vulnerabilities    
+SEMVER WARNING: Recommended action is a potentially breaking change
+  Moderate        Denial of Service                                             
+  Package         js-yaml                                                       
+  Dependency of   optimize-css-assets-webpack-plugin [dev]                      
+  Path            optimize-css-assets-webpack-plugin > cssnano > postcss-svgo   
+                  > svgo > js-yaml                                              
+  More info       https://npmjs.com/advisories/788                              
+
+
+  High            Code Injection                                                
+  Package         js-yaml                                                       
+  Dependency of   optimize-css-assets-webpack-plugin [dev]                      
+  Path            optimize-css-assets-webpack-plugin > cssnano > postcss-svgo   
+                  > svgo > js-yaml                                              
+  More info       https://npmjs.com/advisories/813                              
+
+# Run  npm install --save-dev webpack-bundle-analyzer@3.6.0  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+  Moderate        Cross-Site Scripting                                          
+  Package         webpack-bundle-analyzer                                       
+  Dependency of   webpack-bundle-analyzer [dev]                                 
+  Path            webpack-bundle-analyzer                                       
+                                                                                
+  More info       https://npmjs.com/advisories/826                              
+
+# Run  npm install --save-dev webpack@4.41.2  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+  Low             Denial of Service                                             
+  Package         mem                                                           
+  Dependency of   webpack [dev]                                                 
+  Path            webpack > yargs > os-locale > mem                             
+  More info       https://npmjs.com/advisories/1084                             
+
+# Run  npm install --save-dev copy-webpack-plugin@5.1.0  to resolve 1 vulnerability
+SEMVER WARNING: Recommended action is a potentially breaking change
+  Moderate        Cross-Site Scripting                                          
+  Package         serialize-javascript                                          
+  Dependency of   copy-webpack-plugin [dev]                                     
+  Path            copy-webpack-plugin > serialize-javascript                    
+  More info       https://npmjs.com/advisories/1426                             
+
+# Run  npm update js-yaml --depth 5  to resolve 6 vulnerabilities
+  Moderate        Denial of Service                                             
+  Package         js-yaml                                                       
+  Dependency of   vue-loader [dev]                                              
+  Path            vue-loader > postcss-load-config > cosmiconfig > js-yaml      
+  More info       https://npmjs.com/advisories/788                              
+
+
+  Moderate        Denial of Service                                             
+  Package         js-yaml                                                       
+  Dependency of   vue-loader [dev]                                              
+  Path            vue-loader > postcss-load-config > postcss-load-options >     
+                  cosmiconfig > js-yaml                                         
+  More info       https://npmjs.com/advisories/788                              
+
+
+  Moderate        Denial of Service                                             
+  Package         js-yaml                                                       
+  Dependency of   vue-loader [dev]                                              
+  Path            vue-loader > postcss-load-config > postcss-load-plugins >     
+                  cosmiconfig > js-yaml                                         
+  More info       https://npmjs.com/advisories/788                              
+
+
+  High            Code Injection                                                
+  Package         js-yaml                                                       
+  Dependency of   vue-loader [dev]                                              
+  Path            vue-loader > postcss-load-config > cosmiconfig > js-yaml      
+  More info       https://npmjs.com/advisories/813                              
+
+                                                                                
+  High            Code Injection                                                
+  Package         js-yaml                                                       
+  Dependency of   vue-loader [dev]                                              
+  Path            vue-loader > postcss-load-config > postcss-load-options >     
+                  cosmiconfig > js-yaml                                         
+  More info       https://npmjs.com/advisories/813                              
+
+
+  High            Code Injection                                                
+  Package         js-yaml                                                       
+  Dependency of   vue-loader [dev]                                              
+  Path            vue-loader > postcss-load-config > postcss-load-plugins >     
+                  cosmiconfig > js-yaml                                         
+  More info       https://npmjs.com/advisories/813                              
+
+
+                                 Manual Review                                  
+             Some vulnerabilities require your attention to resolve             
+                                                                                
+          Visit https://go.npm.me/audit-guide for additional guidance           
+
+  High            Arbitrary File Overwrite                                      
+  Package         tar                                                           
+  Patched in      >=2.2.2 <3.0.0 || >=4.4.2                                     
+  Dependency of   webpack [dev]                                                 
+  Path            webpack > watchpack > chokidar > fsevents > node-pre-gyp >    
+                  tar                                                           
+  More info       https://npmjs.com/advisories/803                              
+
+  Moderate        Cross-Site Scripting                                          
+  Package         serialize-javascript                                          
+  Patched in      >=2.1.1                                                       
+  Dependency of   uglifyjs-webpack-plugin [dev]                                 
+  Path            uglifyjs-webpack-plugin > serialize-javascript                
+  More info       https://npmjs.com/advisories/1426                             
+found 16 vulnerabilities (1 low, 9 moderate, 6 high) in 11601 scanned packages
+  run `npm audit fix` to fix 6 of them.
+  8 vulnerabilities require semver-major dependency updates.
+  2 vulnerabilities require manual review. See the full report for details.

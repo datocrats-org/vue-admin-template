@@ -1,0 +1,499 @@
+{
+  "actions": [
+    {
+      "isMajor": true,
+      "action": "install",
+      "resolves": [
+        {
+          "id": 535,
+          "path": "url-loader>mime",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "url-loader",
+      "target": "3.0.0"
+    },
+    {
+      "isMajor": true,
+      "action": "install",
+      "resolves": [
+        {
+          "id": 788,
+          "path": "css-loader>cssnano>postcss-svgo>svgo>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 813,
+          "path": "css-loader>cssnano>postcss-svgo>svgo>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "css-loader",
+      "target": "3.3.0"
+    },
+    {
+      "isMajor": true,
+      "action": "install",
+      "resolves": [
+        {
+          "id": 788,
+          "path": "optimize-css-assets-webpack-plugin>cssnano>postcss-svgo>svgo>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 813,
+          "path": "optimize-css-assets-webpack-plugin>cssnano>postcss-svgo>svgo>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "optimize-css-assets-webpack-plugin",
+      "target": "5.0.3"
+    },
+    {
+      "isMajor": true,
+      "action": "install",
+      "resolves": [
+        {
+          "id": 826,
+          "path": "webpack-bundle-analyzer",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "webpack-bundle-analyzer",
+      "target": "3.6.0"
+    },
+    {
+      "isMajor": true,
+      "action": "install",
+      "resolves": [
+        {
+          "id": 1084,
+          "path": "webpack>yargs>os-locale>mem",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "webpack",
+      "target": "4.41.2"
+    },
+    {
+      "isMajor": true,
+      "action": "install",
+      "resolves": [
+        {
+          "id": 1426,
+          "path": "copy-webpack-plugin>serialize-javascript",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "copy-webpack-plugin",
+      "target": "5.1.0"
+    },
+    {
+      "action": "update",
+      "resolves": [
+        {
+          "id": 788,
+          "path": "vue-loader>postcss-load-config>cosmiconfig>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 788,
+          "path": "vue-loader>postcss-load-config>postcss-load-options>cosmiconfig>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 788,
+          "path": "vue-loader>postcss-load-config>postcss-load-plugins>cosmiconfig>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 813,
+          "path": "vue-loader>postcss-load-config>cosmiconfig>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 813,
+          "path": "vue-loader>postcss-load-config>postcss-load-options>cosmiconfig>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        },
+        {
+          "id": 813,
+          "path": "vue-loader>postcss-load-config>postcss-load-plugins>cosmiconfig>js-yaml",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ],
+      "module": "js-yaml",
+      "target": "3.13.1",
+      "depth": 5
+    },
+    {
+      "action": "review",
+      "module": "tar",
+      "resolves": [
+        {
+          "id": 803,
+          "path": "webpack>watchpack>chokidar>fsevents>node-pre-gyp>tar",
+          "dev": true,
+          "optional": true,
+          "bundled": true
+        }
+      ]
+    },
+    {
+      "action": "review",
+      "module": "serialize-javascript",
+      "resolves": [
+        {
+          "id": 1426,
+          "path": "uglifyjs-webpack-plugin>serialize-javascript",
+          "dev": true,
+          "optional": false,
+          "bundled": false
+        }
+      ]
+    }
+  ],
+  "advisories": {
+    "535": {
+      "findings": [
+        {
+          "version": "1.3.6",
+          "paths": [
+            "url-loader>mime"
+          ]
+        }
+      ],
+      "id": 535,
+      "created": "2017-09-25T19:02:28.152Z",
+      "updated": "2018-04-09T00:38:22.785Z",
+      "deleted": null,
+      "title": "Regular Expression Denial of Service",
+      "found_by": {
+        "name": "Cristian-Alexandru Staicu"
+      },
+      "reported_by": {
+        "name": "Cristian-Alexandru Staicu"
+      },
+      "module_name": "mime",
+      "cves": [
+        "CVE-2017-16138"
+      ],
+      "vulnerable_versions": "< 1.4.1 || > 2.0.0 < 2.0.3",
+      "patched_versions": ">= 1.4.1 < 2.0.0 || >= 2.0.3",
+      "overview": "Affected versions of `mime` are vulnerable to regular expression denial of service when a mime lookup is performed on untrusted user input.",
+      "recommendation": "Update to version 2.0.3 or later.",
+      "references": "[Issue #167](https://github.com/broofa/node-mime/issues/167)",
+      "access": "public",
+      "severity": "moderate",
+      "cwe": "CWE-400",
+      "metadata": {
+        "module_type": "Multi.Library",
+        "exploitability": 4,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/535"
+    },
+    "788": {
+      "findings": [
+        {
+          "version": "3.7.0",
+          "paths": [
+            "css-loader>cssnano>postcss-svgo>svgo>js-yaml",
+            "optimize-css-assets-webpack-plugin>cssnano>postcss-svgo>svgo>js-yaml"
+          ]
+        },
+        {
+          "version": "3.7.0",
+          "paths": [
+            "vue-loader>postcss-load-config>cosmiconfig>js-yaml",
+            "vue-loader>postcss-load-config>postcss-load-options>cosmiconfig>js-yaml",
+            "vue-loader>postcss-load-config>postcss-load-plugins>cosmiconfig>js-yaml"
+          ]
+        }
+      ],
+      "id": 788,
+      "created": "2019-03-18T21:29:08.514Z",
+      "updated": "2019-04-04T03:44:12.205Z",
+      "deleted": null,
+      "title": "Denial of Service",
+      "found_by": {
+        "link": "https://sites.google.com/site/jensdietrich/",
+        "name": "Shawn Rasheed, Jens DIetrich"
+      },
+      "reported_by": {
+        "link": "https://conf.researchr.org/profile/shawnrasheed",
+        "name": "Shawn Rasheed"
+      },
+      "module_name": "js-yaml",
+      "cves": [],
+      "vulnerable_versions": "<3.13.0",
+      "patched_versions": ">=3.13.0",
+      "overview": "Versions of `js-yaml` prior to 3.13.0 are vulnerable to Denial of Service. By parsing a carefully-crafted YAML file, the node process stalls and may exhaust system resources leading to a Denial of Service.",
+      "recommendation": "Upgrade to version 3.13.0.",
+      "references": "",
+      "access": "public",
+      "severity": "moderate",
+      "cwe": "CWE-400",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 6,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/788"
+    },
+    "803": {
+      "findings": [
+        {
+          "version": "4.4.1",
+          "paths": [
+            "webpack>watchpack>chokidar>fsevents>node-pre-gyp>tar"
+          ]
+        }
+      ],
+      "id": 803,
+      "created": "2019-04-04T03:31:56.572Z",
+      "updated": "2019-05-15T14:13:58.612Z",
+      "deleted": null,
+      "title": "Arbitrary File Overwrite",
+      "found_by": {
+        "link": "",
+        "name": "Max Justicz"
+      },
+      "reported_by": {
+        "link": "",
+        "name": "Max Justicz"
+      },
+      "module_name": "tar",
+      "cves": [],
+      "vulnerable_versions": "<2.2.2 || >=3.0.0 <4.4.2",
+      "patched_versions": ">=2.2.2 <3.0.0 || >=4.4.2",
+      "overview": "Versions of `tar` prior to 4.4.2 for 4.x and 2.2.2 for 2.x are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system, and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file.",
+      "recommendation": "For tar 4.x, upgrade to version 4.4.2 or later.\nFor tar 2.x, upgrade to version 2.2.2 or later.",
+      "references": "- [HackerOne Report](https://hackerone.com/reports/344595)",
+      "access": "public",
+      "severity": "high",
+      "cwe": "CWE-59",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 5,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/803"
+    },
+    "813": {
+      "findings": [
+        {
+          "version": "3.7.0",
+          "paths": [
+            "css-loader>cssnano>postcss-svgo>svgo>js-yaml",
+            "optimize-css-assets-webpack-plugin>cssnano>postcss-svgo>svgo>js-yaml"
+          ]
+        },
+        {
+          "version": "3.7.0",
+          "paths": [
+            "vue-loader>postcss-load-config>cosmiconfig>js-yaml",
+            "vue-loader>postcss-load-config>postcss-load-options>cosmiconfig>js-yaml",
+            "vue-loader>postcss-load-config>postcss-load-plugins>cosmiconfig>js-yaml"
+          ]
+        }
+      ],
+      "id": 813,
+      "created": "2019-04-10T19:02:51.064Z",
+      "updated": "2019-04-15T21:29:06.670Z",
+      "deleted": null,
+      "title": "Code Injection",
+      "found_by": {
+        "link": "",
+        "name": "Alex Kocharin"
+      },
+      "reported_by": {
+        "link": "",
+        "name": "Alex Kocharin"
+      },
+      "module_name": "js-yaml",
+      "cves": [],
+      "vulnerable_versions": "<3.13.1",
+      "patched_versions": ">=3.13.1",
+      "overview": "Versions of `js-yaml` prior to 3.13.1 are vulnerable to Code Injection. The `load()` function may execute arbitrary code injected through a malicious YAML file. Objects that have `toString` as key, JavaScript code as value and are used as explicit mapping keys allow attackers to execute the supplied code through the `load()` function. The `safeLoad()` function is unaffected.\n\nAn example payload is \n`{ toString: !<tag:yaml.org,2002:js/function> 'function (){return Date.now()}' } : 1` \nwhich returns the object \n{\n  \"1553107949161\": 1\n}",
+      "recommendation": "Upgrade to version 3.13.1.",
+      "references": "- [GitHub PR](https://github.com/nodeca/js-yaml/pull/480)",
+      "access": "public",
+      "severity": "high",
+      "cwe": "CWE-94",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 5,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/813"
+    },
+    "826": {
+      "findings": [
+        {
+          "version": "2.13.1",
+          "paths": [
+            "webpack-bundle-analyzer"
+          ]
+        }
+      ],
+      "id": 826,
+      "created": "2019-04-19T22:21:35.087Z",
+      "updated": "2019-04-19T22:21:35.087Z",
+      "deleted": null,
+      "title": "Cross-Site Scripting",
+      "found_by": {
+        "link": "",
+        "name": "Yuriy Grunin"
+      },
+      "reported_by": {
+        "link": "",
+        "name": "Yuriy Grunin"
+      },
+      "module_name": "webpack-bundle-analyzer",
+      "cves": [],
+      "vulnerable_versions": "<3.3.2",
+      "patched_versions": ">=3.3.2",
+      "overview": "Versions of `webpack-bundle-analyzer` prior to 3.3.2 are vulnerable to Cross-Site Scripting. The package uses `JSON.stringify()` without properly escaping input which may lead to Cross-Site Scripting.",
+      "recommendation": "Upgrade to version 3.3.2 or later.",
+      "references": "- [GitHub PR](https://github.com/webpack-contrib/webpack-bundle-analyzer/pull/264)\n- [Snyk Report](https://snyk.io/vuln/SNYK-JS-WEBPACKBUNDLEANALYZER-174190)",
+      "access": "public",
+      "severity": "moderate",
+      "cwe": "CWE-79",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 3,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/826"
+    },
+    "1084": {
+      "findings": [
+        {
+          "version": "1.1.0",
+          "paths": [
+            "webpack>yargs>os-locale>mem"
+          ]
+        }
+      ],
+      "id": 1084,
+      "created": "2019-07-18T21:30:31.935Z",
+      "updated": "2019-11-19T23:31:37.349Z",
+      "deleted": null,
+      "title": "Denial of Service",
+      "found_by": {
+        "link": "",
+        "name": "Juan Campa",
+        "email": ""
+      },
+      "reported_by": {
+        "link": "",
+        "name": "Juan Campa",
+        "email": ""
+      },
+      "module_name": "mem",
+      "cves": [],
+      "vulnerable_versions": "<4.0.0",
+      "patched_versions": ">=4.0.0",
+      "overview": "Versions of `mem` prior to 4.0.0 are vulnerable to Denial of Service (DoS).  The package fails to remove old values from the cache even after a value passes its `maxAge` property. This may allow attackers to exhaust the system's memory if they are able to abuse the application logging.",
+      "recommendation": "Upgrade to version 4.0.0 or later.",
+      "references": "- [Snyk Report](https://snyk.io/vuln/npm:mem:20180117)",
+      "access": "public",
+      "severity": "low",
+      "cwe": "CWE-400",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 2,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/1084"
+    },
+    "1426": {
+      "findings": [
+        {
+          "version": "1.5.0",
+          "paths": [
+            "copy-webpack-plugin>serialize-javascript",
+            "uglifyjs-webpack-plugin>serialize-javascript"
+          ]
+        }
+      ],
+      "id": 1426,
+      "created": "2019-12-09T15:26:05.019Z",
+      "updated": "2019-12-10T19:05:13.433Z",
+      "deleted": null,
+      "title": "Cross-Site Scripting",
+      "found_by": {
+        "link": "https://twitter.com/okuryu",
+        "name": "Ryuichi Okumura",
+        "email": ""
+      },
+      "reported_by": {
+        "link": "https://twitter.com/okuryu",
+        "name": "Ryuichi Okumura",
+        "email": ""
+      },
+      "module_name": "serialize-javascript",
+      "cves": [
+        "CVE-2019-16769"
+      ],
+      "vulnerable_versions": "<2.1.1",
+      "patched_versions": ">=2.1.1",
+      "overview": "Versions of `serialize-javascript` prior to 2.1.1 are vulnerable to Cross-Site Scripting (XSS). The package fails to sanitize serialized regular expressions. This vulnerability does not affect Node.js applications.",
+      "recommendation": "Upgrade to version 2.1.1 or later.",
+      "references": "- [GitHub advisory](https://github.com/yahoo/serialize-javascript/security/advisories/GHSA-h9rv-jmmf-4pgx)",
+      "access": "public",
+      "severity": "moderate",
+      "cwe": "CWE-79",
+      "metadata": {
+        "module_type": "",
+        "exploitability": 3,
+        "affected_components": ""
+      },
+      "url": "https://npmjs.com/advisories/1426"
+    }
+  },
+  "muted": [],
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 9,
+      "high": 6,
+      "critical": 0
+    },
+    "dependencies": 15,
+    "devDependencies": 11586,
+    "optionalDependencies": 195,
+    "totalDependencies": 11601
+  },
+  "runId": "e1a824fe-9309-4a80-9bfe-7e0c84f33659"
+}
